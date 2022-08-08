@@ -420,8 +420,8 @@ img {
 .team-list .item {
   background-color: var(--white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-   0px 1px 1px rgba(0, 0, 0, 0.14),
-   0px 2px 1px rgba(0, 0, 0, 0.2);
+              0px 1px 1px rgba(0, 0, 0, 0.14),
+              0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0 0 4px 4px;
 }
 
@@ -453,7 +453,7 @@ img {
   align-items: center;
   justify-content: center;
 
-  transition-property:background-color;
+  transition-property:background-color, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   
@@ -557,12 +557,15 @@ img {
               0px 1px 2px rgba(0, 0, 0, 0.08),
               0px 2px 2px rgba(0, 0, 0, 0.12);
 
-  
 }
 
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
+}
+
+.portfolio-link {
+  display: block;
 }
 
 .portfolio-list .item {
@@ -596,22 +599,21 @@ img {
   color: var(--white);
 }
 
-.portfolio-thumb:hover .portfolio-text
+.portfolio-link:hover .portfolio-text,
+.portfolio-link:focus .portfolio-text
  {
   opacity: 1;
   transform: translateY(0)
 }
 
-
 .portfolio-list .item {
   display: block;
-  transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);  
 }
 
-.portfolio-list .item:hover,
-.portfolio-list .item:focus {
+.portfolio-link:hover,
+.portfolio-link:focus {
   box-shadow:  0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
